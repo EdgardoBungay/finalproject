@@ -1,8 +1,0 @@
-  .hero h1 {
-    animation: title 1.2s forwards linear;
-  }
-  
-  .hero p {
-    animation: subtitle 1.2s forwards linear;
-    animation-delay: 1.2s;
-  }
