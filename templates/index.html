@@ -10,39 +10,13 @@
     
 </head>
 <body>
-<<<<<<< HEAD
-  <div class="banner">
-            <img src="https://s3.amazonaws.com/content.ednavalleyvineyard.com/drupal/production/s3fs-public/2018-01/Category_VSeries_Banner_Desktop_1400x600_EVP_1690902_7913_JSv2_0_0.png">
-      </div>
-    </nav>
-    <div class="hero text-center">
-      <h1>Red & White Wine</h1>
-      <p>Grading the wine quality from "eww" to "Wow, that is excellent".</p>
-    </div>
-        <h1 style="text-align: center; margin-bottom: 50px;">Wine Predictor</h1>
-        <div class="container" style="background-image: url('..\images\banner.png'); height: 500px; text-align: center;">
-            <div class="row">
-              <div class="col">
-                ----------------------------------------------------------------------------------------------------------------
-              </div>
-              <div class="col-6">
-                
-                <h2 style="color: white">Prediction Outcome</h2>
-                {{params_table|safe}}
-                <button style="margin-top: 10px; margin-bottom: 10px; width: 100px; height: 50px;"><a href="/predict"></a>PREDICT</button>
-                {{result_table|safe}}
-              </div>
-              <div class="col">
-                ---------------------------------------------------------------------------------------------------------------
-              </div>
-            </div>
-=======
+
   <div id="wrapper">
       <div class="content">
           <div class="our_header">
               <h1>Red & White Wine</h1>
               <p>Grading the wine quality from "eww" to "Wow, that is excellent".</p>
->>>>>>> bd22b0f2b306f26bd6fd3495d66d651d6ad670fb
+
           </div>
           
           <div class="divider"></div>
@@ -50,12 +24,12 @@
           <h1 style="text-align: center;">Wine Predictor</h1>
           <div class="divider"></div>
           <div class="our_content"> 
-              <h2>Prediction Outcome</h2>
+              <h2>Features</h2>
 
               {{params_table|safe}}
-              <a href="/">
+              <a href="/logistic">
                 <form method="POST">
-                    <button>PREDICT</button>
+                    <button>Run Logistic Regression</button>
                 </form>
               </a>
               {{result_table|safe}}
@@ -67,6 +41,12 @@
               <h5>Confusion Matrix</h5>
 
               {{conf_table|safe}}
+              <div class="divider"></div>
+              <a href="/logistic">
+                <form method="POST">
+                    <button>Run Random Forrest</button>
+                </form>
+              </a>
           </div>
       </div>
 
