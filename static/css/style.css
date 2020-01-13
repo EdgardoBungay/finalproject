@@ -71,7 +71,8 @@ table.dataframe {
 }
 
 button {
-  padding: 15px
+  padding: 15px;
+  width: 275px;
 }
 
 a {

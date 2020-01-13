@@ -24,6 +24,36 @@
           <h1 style="text-align: center;">Wine Predictor</h1>
           <div class="divider"></div>
           <div class="our_content"> 
+          <div class="container">
+              <div class="row">
+
+                    <div class="col-3">
+                        <a href="/logistic">
+                          <button>Run Logistic Regression</button>
+                        </a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="/logistic">
+                          <button>Run Random Forrest</button>
+                        </a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="/logistic">
+                          <button>Run K Neighbors Classifier</button>
+                        </a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="/logistic">
+                        <button>Run Support Vector Classification</button>
+                       </a>
+                    </div>
+
+              </div>
+
+          </div>
               <h2>Features</h2>
 
               {{params_table|safe}}
@@ -43,10 +73,9 @@
               {{conf_table|safe}}
               <div class="divider"></div>
               <a href="/logistic">
-                <form method="POST">
                     <button>Run Random Forrest</button>
-                </form>
               </a>
+              {{params|safe}}
           </div>
       </div>
 

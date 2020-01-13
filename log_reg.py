@@ -42,6 +42,7 @@ def wine_type():
     ran_selection = pd.DataFrame(result_df.iloc[ran]).transpose()
     current_params = ran_selection.drop(columns=["index", "Predictions", "Actual"])
     #param
+    global params_table
     params_table = current_params.to_html(index=False).replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
     current_pred = ran_selection["Predictions"]
     actual = ran_selection["Actual"]
@@ -50,3 +51,6 @@ def wine_type():
     return (model_score, params_table, result_table, class_report, conf_table)
 
 
+
+def wine_quality():
+    return params_table
