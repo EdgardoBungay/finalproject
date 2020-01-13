@@ -6,18 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Wine Predictor</title>
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
 </head>
 <body>
-  <div class="wrapper">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">
-            <img class="wine banner" src="images/banner.png">
-          </a>
-        </div>
+<<<<<<< HEAD
+  <div class="banner">
+            <img src="https://s3.amazonaws.com/content.ednavalleyvineyard.com/drupal/production/s3fs-public/2018-01/Category_VSeries_Banner_Desktop_1400x600_EVP_1690902_7913_JSv2_0_0.png">
       </div>
     </nav>
     <div class="hero text-center">
@@ -41,6 +36,45 @@
                 ---------------------------------------------------------------------------------------------------------------
               </div>
             </div>
+=======
+  <div id="wrapper">
+      <div class="content">
+          <div class="our_header">
+              <h1>Red & White Wine</h1>
+              <p>Grading the wine quality from "eww" to "Wow, that is excellent".</p>
+>>>>>>> bd22b0f2b306f26bd6fd3495d66d651d6ad670fb
           </div>
+          
+          <div class="divider"></div>
+
+          <h1 style="text-align: center;">Wine Predictor</h1>
+          <div class="divider"></div>
+          <div class="our_content"> 
+              <h2>Prediction Outcome</h2>
+
+              {{params_table|safe}}
+              <a href="/">
+                <form method="POST">
+                    <button>PREDICT</button>
+                </form>
+              </a>
+              {{result_table|safe}}
+              <h3>Score: {{model_score}}</h3>
+
+              <h5>Classification Report</h5>
+
+              {{class_report|safe}}
+              <h5>Confusion Matrix</h5>
+
+              {{conf_table|safe}}
+          </div>
+      </div>
+
+      <div class="banner">
+            <img src="{{ url_for('static', filename='images/banner.png') }}">
+      </div>
+  </div>
+
+
 </body>
 </html>
