@@ -7,6 +7,12 @@ import random
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 
+
+def data():
+    red = pd.read_csv("winequality-red.csv")
+    white = pd.read_csv("winequality-white.csv")  
+    our_data = red.to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
+    return(our_data)
 def wine_type():
 
     red = pd.read_csv("winequality-red.csv")

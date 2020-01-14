@@ -24,49 +24,69 @@
           <h1 style="text-align: center;">Wine Predictor</h1>
           <div class="divider"></div>
           <div class="our_content"> 
-          <div class="container">
-              <div class="row">
+            <div class="container">
+                        <div class="row">
+                          <div class="col-3">
+                              <a href="/logistic_regression">
+                                <button>Run Logistic Regression</button>
+                              </a>
+                          </div>
 
-                    <div class="col-3">
-                        <a href="/logistic_regression">
-                          <button>Run Logistic Regression</button>
-                        </a>
+                          <div class="col-3">
+                              <a href="/random_forrest">
+                                <button>Run Random Forrest</button>
+                              </a>
+                          </div>
+
+                          <div class="col-3">
+                              <a href="/knn">
+                                <button>Run K Neighbors Classifier</button>
+                              </a>
+                          </div>
+
+                          <div class="col-3">
+                              <a href="/svc">
+                              <button>Run Support Vector Classification</button>
+                            </a>
+                          </div>
+
+                        </div>
+            </div>
+              <h2>{{title_data}}</h2>
+              <p>{{our_data|safe}}</p>
+
+              <h2>{{title_Features}}</h2>
+              {{params_table|safe}}
+              <h1></h1>
+              <h1></h1>
+              <div class="container">
+                <div class="row"> 
+                    <div class="col-6">
+                            <h2>{{title_Wine_Type}}</h2>
+                            {{result_table|safe}}
+                            <h3>{{title_Score}}{{model_score}}</h3>
+                            <h3>{{title_Classification_Report}}</h3>
+                            {{class_report|safe}}
+                            <h3>{{title_Confusion_Matrix}}</h3>
+                            {{conf_table|safe}}
                     </div>
 
-                    <div class="col-3">
-                        <a href="/random_forrest">
-                          <button>Run Random Forrest</button>
-                        </a>
-                    </div>
+                    <div class="col-6">
+                      <h2>{{title_Wine_Quality}}</h2>
+                          {{result_table_quality|safe}}
 
-                    <div class="col-3">
-                        <a href="/knn">
-                          <button>Run K Neighbors Classifier</button>
-                        </a>
-                    </div>
+                      <h3>{{title_Score}}{{model_score_quality}}</h3>
+                      <h3>{{title_Classification_Report}}</h3>
+                          {{class_report_quality|safe}}
 
-                    <div class="col-3">
-                        <a href="/svc">
-                        <button>Run Support Vector Classification</button>
-                       </a>
+                      <h3>{{title_Confusion_Matrix}}</h3>
+                          {{conf_table_quality|safe}}                     
                     </div>
+                </div>
 
               </div>
 
-          </div>
-              <h2>{{title_Features}}</h2>
-
-              {{params_table|safe}}
-              
-              {{result_table|safe}}
-              <h3>{{title_Score}}{{model_score}}</h3>
-
-              <h5>{{title_ClassificationReport}}</h5>
-
-              {{class_report|safe}}
-              <h5>{{title_Confusion_Matrix}}</h5>
-
-              {{conf_table|safe}}
+ 
               <div class="divider"></div>
           </div>
       </div>

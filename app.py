@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, request
-from log_reg import wine_type, wine_quality
+from log_reg import wine_type, wine_quality, data
 import log_reg
 # import flask
 app = Flask(__name__)
@@ -8,6 +8,9 @@ title_Features = "Features"
 title_Score = "Score: "
 title_Classification_Report = "Classification Report"
 title_Confusion_Matrix = "Confusion Matrix" 
+title_Data = "Wine Data"
+title_Wine_Type = "Wine Type"
+title_Wine_Quality = "Wine Quality"
 
 @app.route("/")
 def index():
@@ -24,7 +27,7 @@ def index():
 def logistic_regression():
     model_score, params_table, result_table, class_report, conf_table = wine_type()
     return render_template("index.html", title_Features=title_Features, title_Score=title_Score, title_Classification_Report=title_Classification_Report,\
-        title_Confusion_Matrix=title_Confusion_Matrix, result_table=result_table, model_score=model_score, params_table=params_table, conf_table=conf_table,\
+        title_Confusion_Matrix=title_Confusion_Matrix, title_Wine_Quality=title_Wine_Quality, title_Wine_Type=title_Wine_Type, result_table=result_table, model_score=model_score, params_table=params_table, conf_table=conf_table,\
              class_report=class_report)
 
 
