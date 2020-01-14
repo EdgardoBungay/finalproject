@@ -90,10 +90,10 @@ def Logistic_Regression_Quality():
     predictions = mygrid.predict(X_test_scaled)
     conf = confusion_matrix(y_test, predictions)
     data = {
-        "Red": [conf[0][0], conf[1][0]],
-        "White": [conf[0][1], conf[1][1]]
+        "Bad Wine": [conf[0][0], conf[1][0]],
+        "Good Wine": [conf[0][1], conf[1][1]]
     }
-    conf_table_quality = pd.DataFrame(data, index=["Red", "White"]).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
+    conf_table_quality = pd.DataFrame(data, index=["Bad Wine", "Good Wine"]).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
     class_report_quality = classification_report(y_test, predictions, output_dict=True)
     #param
     class_report_quality = pd.DataFrame(class_report_quality).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
@@ -185,10 +185,10 @@ def Random_Forrest_Quality():
     predictions = mygrid.predict(X_test_scaled)
     conf = confusion_matrix(y_test, predictions)
     data = {
-        "Red": [conf[0][0], conf[1][0]],
-        "White": [conf[0][1], conf[1][1]]
+        "Bad Wine": [conf[0][0], conf[1][0]],
+        "Good Wine": [conf[0][1], conf[1][1]]
     }
-    conf_table_quality = pd.DataFrame(data, index=["Red", "White"]).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
+    conf_table_quality = pd.DataFrame(data, index=["Bad Wine", "Good Wine"]).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
     class_report_quality = classification_report(y_test, predictions, output_dict=True)
     #param
     class_report_quality = pd.DataFrame(class_report_quality).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
@@ -278,10 +278,10 @@ def KNN_Quality():
     predictions = mygrid.predict(X_test_scaled)
     conf = confusion_matrix(y_test, predictions)
     data = {
-        "Red": [conf[0][0], conf[1][0]],
-        "White": [conf[0][1], conf[1][1]]
+        "Bad Wine": [conf[0][0], conf[1][0]],
+        "Good Wine": [conf[0][1], conf[1][1]]
     }
-    conf_table_quality = pd.DataFrame(data, index=["Red", "White"]).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
+    conf_table_quality = pd.DataFrame(data, index=["Bad Wine", "Good Wine"]).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
     class_report_quality = classification_report(y_test, predictions, output_dict=True)
     #param
     class_report_quality = pd.DataFrame(class_report_quality).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
@@ -374,10 +374,10 @@ def SVC_Quality():
     predictions = mygrid.predict(X_test_scaled)
     conf = confusion_matrix(y_test, predictions)
     data = {
-        "Red": [conf[0][0], conf[1][0]],
-        "White": [conf[0][1], conf[1][1]]
+        "Bad Wine": [conf[0][0], conf[1][0]],
+        "Good Wine": [conf[0][1], conf[1][1]]
     }
-    conf_table_quality = pd.DataFrame(data, index=["Red", "White"]).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
+    conf_table_quality = pd.DataFrame(data, index=["Bad Wine", "Good Wine"]).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
     class_report_quality = classification_report(y_test, predictions, output_dict=True)
     #param
     class_report_quality = pd.DataFrame(class_report_quality).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
