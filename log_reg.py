@@ -86,7 +86,7 @@ def Logistic_Regression_Quality():
     model_score_quality = mygrid.score(X_test_scaled, y_test)
 
     #param
-    grid_search_quality = pd.DataFrame(mygrid.cv_results_)
+    grid_search_quality = pd.DataFrame(mygrid.cv_results_).to_html().replace("\n", "").replace('<tr style="text-align: right;">', '<tr>')
     predictions = mygrid.predict(X_test_scaled)
     conf = confusion_matrix(y_test, predictions)
     data = {
@@ -106,7 +106,6 @@ def Logistic_Regression_Quality():
     result_df["Actual"] = y_test
     result_df = result_df.reset_index()
     ran_selection = pd.DataFrame(result_df.iloc[ran]).transpose()
-    current_params = ran_selection.drop(columns=["index", "Predictions", "Actual"])
     #param
     current_pred = ran_selection["Predictions"]
     actual = ran_selection["Actual"]

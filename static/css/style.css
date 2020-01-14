@@ -104,3 +104,12 @@ a {
 .buttoncontainer {
   text-align: center;
 }
+
+
+.gridsearch h1 {
+  margin-left: 30px
+}
+
+.gridsearch table {
+  margin-bottom: 100px
+}
